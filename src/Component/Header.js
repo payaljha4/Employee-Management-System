@@ -1,7 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
+import { Redirect } from 'react-router';
 export default function Header(props) {
+ 
+  
     return (
         <div>
          
@@ -26,10 +29,21 @@ export default function Header(props) {
       {props.searchBar?<form className="d-flex">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-success" type="submit">Search</button>
+        
       </form>: ""}
+      <br/>
+      <a class="btn btn-primary" href="/" role="button" >Logout</a>
+      
+      
     </div>
   </div>
 </nav>
+
+         
+          
+        
+          
+       
        
         </div>
     )

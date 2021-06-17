@@ -56,19 +56,26 @@ function App() {
     <>
     <Router>
     
-    <Route exact path="/Login">
-            <Login />
-          </Route>      
         
-    <Header title="Employee Management System" searchBar={false}/>
+        
+    <Header title="Employee Management System" searchBar={true}/>
     
     
-    <Switch>
     
+   
+          <Switch>
           <Route exact path="/" render={()=>{
             return(
-            <>
+            <>  
             
+            <Login />
+            </>)
+          }}>
+    
+          </Route>
+          <Route exact path="/home" render={()=>{
+            return(
+            <>  
             <AddEmployee addEmployee={addEmployee}/>
     <DetailsList details={details} onDelete={onDelete}/>
     </>)
@@ -78,6 +85,7 @@ function App() {
           <Route exact path="/about">
             <About />
           </Route>
+          
         </Switch>
         
     <Footer/>

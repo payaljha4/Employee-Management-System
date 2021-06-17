@@ -18,6 +18,7 @@ export const AddEmployee = (props) => {
         setNumber("");
         }
 
+        
     }
     return (
         <div className="container my-3">
@@ -41,7 +42,9 @@ export const AddEmployee = (props) => {
   </div>
   
   <button type="submit" className="btn btn-sm btn-success">Add Employee</button>
+  
 </form>
+
         </div>
     )
 }
